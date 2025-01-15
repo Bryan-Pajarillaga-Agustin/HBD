@@ -1,0 +1,15 @@
+.button {
+    padding: .5rem 1rem;
+    color: white;
+    background-color: #e07b8c;
+    font-family: "Roboto Mono";
+    font-size: 1.24rem;
+    z-index: 3;
+    border: 5px solid #714950;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: white;
+    color: #e07b8c;
+}

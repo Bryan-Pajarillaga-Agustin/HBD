@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+.hide, .mainPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    color: rgb(213, 139, 151);
+    font-size: clamp(1rem, 2vw, 3rem);
+    text-shadow: 1px 1px 3px rgb(170, 9, 9);
+    z-index: -1;
+}
+.hide{
+    opacity: 1;
+    animation: hidePage 1s 1s ease-out forwards;
+}
+
+@keyframes hidePage {
+    from{
+        opacity: 1;
+        display: flex;
+        transform: translateX(0vh);
+    }
+    to{
+        opacity: 0;
+        display: none;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes hide{
+    from{
+        opacity: 1;
+        display: flex;
+        transform: translateX(0vw);
+    }
+    to{
+        opacity: 0;
+        display: none;
+        transform: translateX(-100vw);
+    }
+}
+.mainPage {
+    opacity: 0;
+    animation: show 0.5s linear forwards;
+    font-size: clamp(1rem, 2vw, 5rem);
+}
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+.backGround {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    background-image: url('Background.png');
+    background-size: 100% 55%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10% 10% 10%;
+    justify-content: center;
+    width: 50%;
+    z-index: 1;
+}
+.hide .left{
+    opacity: 1;
+    animation: hide 1s 0.5s linear forwards;
+}
+.mainPage .left{
+    opacity: 0;
+    animation: greet 0.5s 1s ease-in forwards;
+    transition: opacity 0.5s linear forwards;
+}
+.button{
+    font-size: clamp(.5rem, 2vw, 2rem);
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    width: fit-content;
+}
+@keyframes greet{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.right {
+    display: flex;
+    width: 40%;
+    justify-content: end;
+    margin-right: 10%;
+}
+
+.hide .Sarah{
+    opacity: 1;
+    z-index: -1;
+    animation: hideSarah .5s ease-out forwards;
+}
+
+
+.Sarah{
+    opacity: 0;
+    z-index: -1;
+    animation: sarah .5s 1.5s ease-out forwards;
+}
+
+
+@keyframes sarah{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) ;
+    }
+}
+
+@keyframes hideSarah{
+    from{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+
+

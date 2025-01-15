@@ -1,0 +1,99 @@
+.greetings {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    z-index: -2;
+}
+.canvas {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+
+/* Dialog Box Styles */
+
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.hideDialog, .dialogBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(90%, 5vw, 400px);
+    text-shadow: 1px 1px 5px rgb(119, 24, 40);
+    color: rgb(230, 123, 181);
+    font-size: clamp(.5rem, 5vw, 1.5rem);
+    z-index: 1;
+}
+
+.hideDialog{
+    display: none;
+}
+.dialogBox {
+    opacity: 0;
+    animation: show 1s 1.5s linear forwards;
+}
+.dialogBox h1 {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.button{
+    width: fit-content;
+
+}
+
+/* Greetings Box styles */
+
+.hideGreetingsBox{
+    display: none;
+}
+.greetingsBox {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    z-index: -1;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    animation: show 1s linear forwards;
+}
+
+.greetingsBox h1{
+    text-align: center;
+    color: #e474e3b9;
+    text-shadow: 1px 1px 5px #de750d;
+}
+.greetingsBox h1 .hideTexts{
+    opacity: 0;
+    display: none;
+}
+.greetingsBox h1 .show {
+    display: block;
+    animation: show 0.5s ease-in-out forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    } to {
+        
+        opacity: 1;
+        display: block;
+    }
+}
